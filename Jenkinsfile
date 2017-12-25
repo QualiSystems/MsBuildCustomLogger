@@ -5,6 +5,6 @@ node('gp1') {
 	
 	dir('SampleApp') {
 		sh('sudo dotnet restore')
-        sh('sudo dotnet build /noconsolelogger /logger:CustomLogger.MyLogger,../CustomLogger/bin/Debug/netstandard1.4/CustomLogger.dll')
+        sh('sudo dotnet build /noconsolelogger /verbosity:normal /logger:CustomLogger.MyLogger,../CustomLogger/bin/Debug/netstandard1.4/CustomLogger.dll')
     }
 }
